@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.util.List;
 
 public interface AdminProductService {
-    public ProductDto addProduct(ProductDto productDto) throws IOException;
+    public ProductDto addProduct(ProductDto productDto) throws IOException ;
 
-    public List<ProductDto> getAllProduct();
+    public List<ProductDto> getAllProduct() ;
+
+    public List<ProductDto> getAllProductByName(String name);
 }

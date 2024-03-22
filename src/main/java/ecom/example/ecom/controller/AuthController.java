@@ -1,5 +1,4 @@
 package ecom.example.ecom.controller;
-
 import ecom.example.ecom.dto.AuthenticationRequest;
 import ecom.example.ecom.dto.SignupRequest;
 import ecom.example.ecom.dto.UserDto;
@@ -21,7 +20,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.io.IOException;
 import java.util.Optional;
 

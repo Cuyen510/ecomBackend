@@ -1,9 +1,7 @@
 package ecom.example.ecom.controller.admin;
-
-
 import ecom.example.ecom.dto.CategoryDto;
 import ecom.example.ecom.entity.Category;
-import ecom.example.ecom.services.Admin.category.CategoryService;
+import ecom.example.ecom.services.Admin.category.AdminCategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +14,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AdminCategoryController {
 
-    private final CategoryService categoryService;
+    private final AdminCategoryService categoryService;
 
 
-    @PostMapping("category")
-    public ResponseEntity<Category> createCategory(@RequestBody CategoryDto categoryDto){
+    @PostMapping("/category")
+    public ResponseEntity<Category> addCategory(@RequestBody CategoryDto categoryDto){
         Category category = categoryService.createCategory(categoryDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(category);
     }
